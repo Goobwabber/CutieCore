@@ -28,6 +28,7 @@ namespace CutieCore.HarmonyPatches
         {
             AddDefaultPatch<ActionButtonTextRefreshPatch>();
             AddDefaultPatch<ActionButtonTextSetPatch>();
+            AddDefaultPatch<ColorSchemePatch>();
         }
 
         private static void AddDefaultPatch<T>() where T : class

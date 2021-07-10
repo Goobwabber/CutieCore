@@ -1,6 +1,12 @@
 ﻿using HarmonyLib;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CutieCore.HarmonyPatches
 {
@@ -19,6 +25,38 @@ namespace CutieCore.HarmonyPatches
 		static void Prefix(ref string value)
 		{
 			value = $"{Plugin.Config.Cutie} Cute";
+		}
+	}
+
+	[HarmonyPatch(typeof(GameplayCoreInstaller), nameof(GameplayCoreInstaller.InstallBindings), MethodType.Normal)]
+	internal class ColorSchemePatch
+	{
+		private static readonly MethodInfo _colorSchemeMethod = typeof(FromBinderGeneric<ColorScheme>).GetMethod(nameof(FromBinderGeneric<ColorScheme>.FromInstance));
+		//private static readonly FieldInfo _sceneSetupDataField = typeof(GameplayCoreInstaller).GetField("_sceneSetupData", BindingFlags.Instance | BindingFlags.NonPublic);
+
+		private static readonly MethodInfo _colorSchemeAttacher = SymbolExtensions.GetMethodInfo(() => ColorSchemeAttacher(null, null));
+
+		static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+		{
+			var codes = instructions.ToList();
+			for (int i = 0; i < codes.Count; i++)
+			{
+				if (codes[i].opcode == OpCodes.Callvirt && codes[i].Calls(_colorSchemeMethod))
+				{
+					CodeInstruction newCode = new CodeInstruction(OpCodes.Callvirt, _colorSchemeAttacher);
+					codes[i] = newCode;
+				}
+			}
+
+			return codes.AsEnumerable();
+		}
+
+		private static ScopeConcreteIdArgConditionCopyNonLazyBinder ColorSchemeAttacher(FromBinderGeneric<ColorScheme> contract, ColorScheme instance)
+		{
+			Color mainColor = Plugin.Config.GetColor();
+			Color altColor = Plugin.Config.GetAltColor();
+			ColorScheme newColorScheme = new ColorScheme(instance, mainColor, altColor, mainColor, altColor, false, mainColor, altColor, mainColor);
+			return contract.FromInstance(newColorScheme);
 		}
 	}
 }

@@ -28,6 +28,10 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Colors">
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Colors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="CustomBanners">
       <HintPath>$(BeatSaberDir)\Plugins\CustomBanners.dll</HintPath>
       <Private>False</Private>
