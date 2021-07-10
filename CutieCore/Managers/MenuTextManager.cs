@@ -9,8 +9,15 @@ namespace CutieCore.Managers
 	{
 		public void Initialize()
 		{
+			YeetText();
 			SetColors(Plugin.Config.GetColor(), Plugin.Config.GetAltColor());
 			SetText(Plugin.Config.Cutie, "Cute");
+		}
+
+		[MethodImpl(MethodImplOptions.NoInlining)]
+		public void YeetText()
+		{
+			CustomMenuText.Plugin.defaultLogo.SetActive(false);
 		}
 
 		[MethodImpl(MethodImplOptions.NoInlining)]
@@ -22,8 +29,8 @@ namespace CutieCore.Managers
 		[MethodImpl(MethodImplOptions.NoInlining)]
 		public void SetColors(Color mainColor, Color bottomColor)
 		{
-			CustomMenuText.Plugin.defaultMainColor = mainColor;
-			CustomMenuText.Plugin.defaultBottomColor = bottomColor;
+			CustomMenuText.Plugin.MainColor = mainColor;
+			CustomMenuText.Plugin.BottomColor = bottomColor;
 		}
 	}
 }

@@ -28,7 +28,7 @@ namespace CutieCore.Managers
 
 		private void HandleLobbyEnvironmentLoaded(object sender, System.EventArgs e)
 		{
-			_lobbyEnvironmentManager.SetAllPlayerPlaceColors(Plugin.Config.GetColor());
+			_lobbyEnvironmentManager.SetAllPlayerPlaceColors(Plugin.Config.GetColor(), true);
 		}
 	}
 }

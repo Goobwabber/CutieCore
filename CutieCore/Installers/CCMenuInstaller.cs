@@ -12,13 +12,13 @@ namespace CutieCore.Installers
 			PluginMetadata multiplayerExtensionsMetaData = PluginManager.GetPluginFromId("MultiplayerExtensions");
 			PluginMetadata diColorsMetaData = PluginManager.GetPluginFromId("DiColors");
 
-			if (customMenuTextMetaData != null && customMenuTextMetaData.Version >= new SemVer.Version("^3.4.0"))
+			if (customMenuTextMetaData != null && customMenuTextMetaData.Version >= new SemVer.Version(3, 4, 0))
 				Container.BindInterfacesAndSelfTo<MenuTextManager>().AsSingle();
 
-			if (multiplayerExtensionsMetaData != null && multiplayerExtensionsMetaData.Version >= new SemVer.Version("^0.5.4"))
+			if (multiplayerExtensionsMetaData != null && multiplayerExtensionsMetaData.Version >= new SemVer.Version(0, 5, 4))
 				Container.BindInterfacesAndSelfTo<MultiplayerManager>().AsSingle();
 
-			if (diColorsMetaData != null && diColorsMetaData.Version >= new SemVer.Version("^1.0.4"))
+			if (diColorsMetaData != null && diColorsMetaData.Version >= new SemVer.Version(1, 0, 4))
 				Container.BindInterfacesAndSelfTo<DiColorsManager>().AsSingle();
 		}
 	}

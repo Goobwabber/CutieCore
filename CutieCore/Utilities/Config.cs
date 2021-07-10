@@ -2,7 +2,7 @@
 
 namespace CutieCore.Utilities
 {
-    class PluginConfig
+    public class PluginConfig
     {
         public virtual string Cutie { get; set; } = "Pink";
         public virtual string Color { get; set; } = "#FF69B4";
