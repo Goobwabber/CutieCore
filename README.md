@@ -1,9 +1,10 @@
 # CutieCore (PC Only) [![Build](https://github.com/Goobwabber/CutieCore/workflows/Build/badge.svg?event=push)](https://github.com/Goobwabber/CutieCore/actions?query=workflow%3ABuild+branch%3Amain)
-Description here
+Cutest beatsaber mod
 
-## Features
-* best mod
-* is very useful
+## Features (Features require optional mods)
+* [Custom Menu Text](https://github.com/headassbtw/CustomMenuText)
+* Multiplayer Player Places - requires [MultiplayerExtensions](https://github.com/Goobwabber/MultiplayerExtensions)
+* Various Assorted Coloring - requires [DiColors](https://github.com/Auros/DiColors)
 
 ## Installation
 1. Ensure you have the [required mods](https://github.com/Goobwabber/CutieCore#requirements)
