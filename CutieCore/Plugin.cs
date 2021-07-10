@@ -55,7 +55,7 @@ namespace CutieCore
         [OnExit]
         public void OnApplicationQuit()
         {
-
+            
         }
     }
 }
