@@ -19,6 +19,9 @@ Cutest beatsaber mod
 These can be downloaded from [BeatMods](https://beatmods.com/#/mods) or using Mod Assistant. **Do NOT use any of the DLLs in the `Refs` folder, they have been stripped of code and will not work.**
 * BeatSaberMarkupLanguage v1.4.5+
 * SiraUtil v2.4.0+
+* DiColors v1.0.4+ **OPTIONAL**
+* MultiplayerExtensions v0.5.4+ **OPTIONAL**
+* CustomMenuText v3.4.0+ **OPTIONAL**
 
 ## Reporting Issues
 * The best way to report issues is to click on the `Issues` tab at the top of the GitHub page. This allows any contributor to see the problem and attempt to fix it, and others with the same issue can contribute more information. **Please try the troubleshooting steps before reporting the issues listed there. Please only report issues after using the latest build, your problem may have already been fixed.**
