@@ -29,19 +29,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CustomBanners">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Plugins\CustomBanners.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\CustomBanners.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CustomMenuText">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Plugins\CustomMenuText.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\CustomMenuText.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DiColors">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Plugins\DiColors.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\DiColors.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HMUI">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\HMUI.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\HMUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Main">
@@ -58,7 +58,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="MultiplayerExtensions">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Plugins\MultiplayerExtensions.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\MultiplayerExtensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SemVer">
@@ -76,7 +76,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
@@ -88,11 +88,11 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>R:\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Zenject">
