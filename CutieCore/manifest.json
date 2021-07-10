@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "CutieCore",
+  "name": "CutieCore",
+  "author": "Goobwabber",
+  "version": "0.1.0",
+  "description": "Makes your game cute.",
+  "gameVersion": "1.16.2",
+  "dependsOn": {
+	"BSIPA": "^4.1.4",
+	"SiraUtil": "^2.5.2",
+	"BeatSaberMarkupLanguage": "^1.4.0"
+  },
+  "loadAfter": [
+	"MultiplayerExtensions",
+	"DiColors"
+  ],
+  "misc": {
+	"dependsOnOptionally": {
+	  "CustomMenuText": "^3.4.0",
+	  "MultiplayerExtensions": "^0.5.4",
+	  "DiColors": "^1.0.4"
+	}
+  },
+  "links": {
+	"project-home": "https://github.com/Goobwabber/CutieCore",
+	"donate": "https://github.com/Goobwabber/CutieCore#donate"
+  }
+}
