@@ -43,8 +43,11 @@ namespace CutieCore
             Log = logger;
             Config = conf.Generated<PluginConfig>();
 
-            zenjector.OnMenu<CCMenuInstaller>();
-            zenjector.OnGame<CCGameInstaller>();
+            if (Config.Cutie.ToLower() != "goobie")
+            {
+                zenjector.OnMenu<CCMenuInstaller>();
+                zenjector.OnGame<CCGameInstaller>();
+            }
         }
 
         [OnStart]
