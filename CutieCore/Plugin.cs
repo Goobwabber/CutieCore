@@ -42,12 +42,8 @@ namespace CutieCore
             Metadata = pluginMetadata;
             Log = logger;
             Config = conf.Generated<PluginConfig>();
-
-            if (Config.Cutie.ToLower() != "goobie")
-            {
-                zenjector.OnMenu<CCMenuInstaller>();
-                zenjector.OnGame<CCGameInstaller>();
-            }
+            zenjector.OnMenu<CCMenuInstaller>();
+            zenjector.OnGame<CCGameInstaller>();
         }
 
         [OnStart]
