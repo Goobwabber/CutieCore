@@ -4,6 +4,7 @@ Cutest beatsaber mod
 ## Features (Features require optional mods)
 * Modifies the action button
 * Forces color scheme without you asking
+* You're >90% cute
 * [CustomMenuText](https://github.com/headassbtw/CustomMenuText)
 * [HitScoreVisualizer](https://github.com/ErisApps/HitScoreVisualizer)
 * Multiplayer Player Places - requires [MultiplayerExtensions](https://github.com/Goobwabber/MultiplayerExtensions)
