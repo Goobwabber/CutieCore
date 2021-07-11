@@ -10,6 +10,7 @@
 ""MultiplayerExtensions.dll?alias=Plugins\MultiplayerExtensions.dll
 ""CustomMenuText.dll?alias=Plugins\CustomMenuText.dll
 ""DiColors.dll?alias=Plugins\DiColors.dll
+""HitScoreVisualizer.dll?alias=Plugins\HitScoreVisualizer.dll
 
 "Libs/
 ""0Harmony.dll?alias=Libs\0Harmony.dll

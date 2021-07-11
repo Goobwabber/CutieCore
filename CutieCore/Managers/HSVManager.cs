@@ -29,7 +29,7 @@ namespace CutieCore.Managers
 
 				Color color = Plugin.Config.GetColor();
 				ConstructorInfo judgementCtor = typeof(HitScoreVisualizer.Settings.Judgment).GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance)[0];
-				object newJudgement = judgementCtor.Invoke(new object[] { 115, $"<size=200%>{Plugin.Config.Cutie} Cute</size>", new List<float> { color.r, color.g, color.b, color.a }, false });
+				object newJudgement = judgementCtor.Invoke(new object[] { 115, $"<size=150%>{Plugin.Config.Cutie} Cute</size>", new List<float> { color.r, color.g, color.b, color.a }, false });
 				hsvConfig.Judgments.Insert(0, (HitScoreVisualizer.Settings.Judgment)newJudgement);
 			}
 		}
