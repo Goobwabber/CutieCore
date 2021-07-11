@@ -28,6 +28,29 @@ namespace CutieCore.HarmonyPatches
 		}
 	}
 
+	[HarmonyPatch(typeof(RankModel), nameof(RankModel.GetRankName), MethodType.Normal)]
+	internal class RankNamePatch
+	{
+		static bool Prefix(RankModel.Rank rank, ref string __result)
+		{
+			if (rank == RankModel.Rank.SSS || rank == RankModel.Rank.SS)
+			{
+				__result = "Cute";
+				return false;
+			}
+			return true;
+		}
+	}
+
+	[HarmonyPatch(typeof(ImmediateRankUIPanel), nameof(ImmediateRankUIPanel.RefreshUI), MethodType.Normal)]
+	internal class RankColorPatch
+	{
+		static void Postfix(RelativeScoreAndImmediateRankCounter ____relativeScoreAndImmediateRankCounter, TextMeshProUGUI ____rankText)
+		{
+			____rankText.color = ____rankText.text == "Cute" ? Plugin.Config.GetColor() : Plugin.Config.GetAltColor();
+		}
+	}
+
 	[HarmonyPatch(typeof(GameplayCoreInstaller), nameof(GameplayCoreInstaller.InstallBindings), MethodType.Normal)]
 	internal class ColorSchemePatch
 	{
