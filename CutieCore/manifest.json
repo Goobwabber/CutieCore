@@ -13,13 +13,15 @@
   },
   "loadAfter": [
 	"MultiplayerExtensions",
-	"DiColors"
+	"DiColors",
+	"HitScoreVisualizer"
   ],
   "misc": {
 	"dependsOnOptionally": {
 	  "CustomMenuText": "^3.4.0",
 	  "MultiplayerExtensions": "^0.5.4",
-	  "DiColors": "^1.0.4"
+	  "DiColors": "^1.0.4",
+	  "HitScoreVisualizer": "^3.1.0"
 	}
   },
   "links": {

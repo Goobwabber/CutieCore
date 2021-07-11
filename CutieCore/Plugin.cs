@@ -44,6 +44,7 @@ namespace CutieCore
             Config = conf.Generated<PluginConfig>();
 
             zenjector.OnMenu<CCMenuInstaller>();
+            zenjector.OnGame<CCGameInstaller>();
         }
 
         [OnStart]
